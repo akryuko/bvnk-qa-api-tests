@@ -1,0 +1,168 @@
+{
+  "_comment": "Verbatim responses captured from https://qa-simulator.shared.bvnk.com on 2026-09-15. Access tokens and account identifiers are replaced with placeholders. Used by tests/unit/test_models.py to check the response models offline. Re-capture these if the API changes.",
+  "init": {
+    "access_token": "example-access-token-not-a-real-credential----------------------",
+    "token_type": "bearer",
+    "expiry": 1789548705
+  },
+  "health": {
+    "uptime": "26 days, 2 hours, 57 minutes, 32 seconds",
+    "approximate_db_size": "0.05 MB",
+    "total_authenticated_requests": 109
+  },
+  "echo": {
+    "auth_token_expiry_time": "2026-09-16 08:51:45",
+    "request_payload": {"k": 1}
+  },
+  "wallet": {
+    "id": 19,
+    "description": "ETH Wallet #82258",
+    "currency": {
+      "id": 305,
+      "code": "ETH",
+      "fiat": false,
+      "icon": "https://coindirect-filestore.s3.amazonaws.com/com.coindirect.core.finance.Currency/7064b059-c058-4141-9bad-70b3febf4704.png",
+      "name": "Ethereum",
+      "withdrawalParameters": [],
+      "options": {
+        "address": "https://etherscan.io/address/{{address}}",
+        "explorer": "https://etherscan.io/",
+        "transaction": "https://etherscan.io/tx/{{hash}}",
+        "confirmations": 12
+      },
+      "withdrawalFee": "0",
+      "depositFee": "0",
+      "supportsDeposits": false,
+      "supportsWithdrawals": false,
+      "quantityPrecision": 8,
+      "pricePrecision": 8,
+      "protocols": [{"code": "ETH", "network": "Ethereum", "networkCode": "ETHEREUM"}]
+    },
+    "supportsWithdrawals": false,
+    "supportsDeposits": false,
+    "custodianWallet": null,
+    "supportsThirdParty": false,
+    "supportsInternalBvnkNetworkTransfers": false,
+    "partner": null,
+    "isEmoney": false,
+    "supportedTransferDestinations": [],
+    "protocol": "ETH",
+    "address": "simulated-address-714576899",
+    "lookup": null,
+    "balance": "3.70000",
+    "available": "3.70000",
+    "withdrawalFee": "0.000005",
+    "depositFee": "0",
+    "convertedAvailable": "10000",
+    "alternatives": [],
+    "approxAvailable": "3.70000",
+    "approxBalance": "3.70000",
+    "approxConvertedAvailable": "10000",
+    "lsid": "acc:00000000000000:aaaaa:0",
+    "status": "ACTIVE"
+  },
+  "quote_pending": {
+    "id": 11,
+    "from": "ETH",
+    "to": "TRX",
+    "amountIn": "0.25000000",
+    "amountDue": "0.25000000",
+    "amountOut": "3101.041216",
+    "price": "12405.40540541",
+    "quoteStatus": "PENDING",
+    "paymentStatus": "PENDING",
+    "acceptanceExpiryDate": 1789462325,
+    "acceptanceDate": null,
+    "paymentExpiryDate": 1789462665,
+    "paymentReceiptDate": null,
+    "payInLegs": [],
+    "payInMethod": {
+      "id": 5,
+      "code": "wallet",
+      "settlementCurrency": "ETH",
+      "requestedCurrency": null,
+      "estimatedExchangeRate": null,
+      "accountMethods": []
+    },
+    "payOutMethod": {
+      "id": 3,
+      "code": "wallet",
+      "currency": "TRX",
+      "accountMethods": [
+        {"id": 491, "display": null},
+        {"id": 660, "display": null},
+        {"id": 1261, "display": null}
+      ]
+    },
+    "uuid": "3642869f-386c-49ea-99c5-df16c4727377",
+    "payOutInstruction": null,
+    "payInInstruction": null,
+    "usePayInMethod": {"id": 19, "display": null},
+    "usePayOutMethod": {"id": 20, "display": null},
+    "fee": "0.000025",
+    "processingFee": "0",
+    "type": "FIXED",
+    "netPrice": "12405.40540541",
+    "grossPrice": "12405.40540541",
+    "amountInGross": "0.25000000",
+    "amountInNet": "0.25000000",
+    "fees": {
+      "percentage": {"service": "0.01", "processing": "0"},
+      "value": {"service": "0.000025", "processing": "0"}
+    },
+    "dateCreated": 1789462305,
+    "lastUpdated": 1789462305
+  },
+  "quote_accepted": {
+    "id": 11,
+    "from": "ETH",
+    "to": "TRX",
+    "amountIn": "0.25000000",
+    "amountDue": "0.25000000",
+    "amountOut": "3101.041216",
+    "price": "12405.40540541",
+    "quoteStatus": "ACCEPTED",
+    "paymentStatus": "PROCESSING",
+    "acceptanceExpiryDate": 1789462325,
+    "acceptanceDate": 1789462305,
+    "paymentExpiryDate": 1789462665,
+    "paymentReceiptDate": null,
+    "payInLegs": [],
+    "payInMethod": {
+      "id": 5,
+      "code": "wallet",
+      "settlementCurrency": "ETH",
+      "requestedCurrency": null,
+      "estimatedExchangeRate": null,
+      "accountMethods": []
+    },
+    "payOutMethod": {
+      "id": 3,
+      "code": "wallet",
+      "currency": "TRX",
+      "accountMethods": [
+        {"id": 491, "display": null},
+        {"id": 660, "display": null},
+        {"id": 1261, "display": null}
+      ]
+    },
+    "uuid": "3642869f-386c-49ea-99c5-df16c4727377",
+    "payOutInstruction": null,
+    "payInInstruction": null,
+    "usePayInMethod": {"id": 19, "display": null},
+    "usePayOutMethod": {"id": 20, "display": null},
+    "fee": "0.000025",
+    "processingFee": "0",
+    "type": "FIXED",
+    "netPrice": "12405.40540541",
+    "grossPrice": "12405.40540541",
+    "amountInGross": "0.25000000",
+    "amountInNet": "0.25000000",
+    "fees": {
+      "percentage": {"service": "0.01", "processing": "0"},
+      "value": {"service": "0.000025", "processing": "0"}
+    },
+    "dateCreated": 1789462305,
+    "lastUpdated": 1789462305
+  }
+}

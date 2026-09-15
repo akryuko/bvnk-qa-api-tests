@@ -1,0 +1,48 @@
+[project]
+name = "bvnk-qa-api-tests"
+version = "1.0.0"
+description = "End-to-end API tests for the BVNK QA currency conversion simulator"
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF", "DTZ", "S", "FURB"]
+ignore = [
+    # Monetary values are always built from strings, never numeric literals:
+    # Decimal(0.1) is not 0.1. Keeping the string form everywhere makes the
+    # convention enforceable by eye. See src/bvnk_sim/money.py.
+    "FURB157",
+    # `assert` is how a test states its expectation.
+    "S101",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Tokens and secrets in tests are fixtures, not credentials.
+"tests/**" = ["S105", "S106"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+# src holds the client library, tests holds shared test data (scenarios.py).
+pythonpath = ["src", "tests"]
+testpaths = ["tests"]
+addopts = [
+    "-ra",
+    "--strict-markers",
+    "--strict-config",
+    "--html=reports/report.html",
+    "--self-contained-html",
+    "--junitxml=reports/junit.xml",
+]
+markers = [
+    "e2e: full conversion journeys against the live simulator",
+    "contract: response schema, status codes and endpoint behaviour",
+    "negative: input validation and rejection paths",
+    "unit: offline checks, no network required",
+    "slow: takes longer than 20s (waits out a quote expiry)",
+]
+log_level = "INFO"
+log_format = "%(asctime)s %(levelname)-7s %(name)s %(message)s"
+log_date_format = "%H:%M:%S"

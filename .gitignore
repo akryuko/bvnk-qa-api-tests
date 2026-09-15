@@ -1,0 +1,17 @@
+# Build output — the committed example run lives in docs/
+reports/
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+.venv/
+venv/
+env/
+
+.env
+
+.idea/
+.vscode/
+.DS_Store
